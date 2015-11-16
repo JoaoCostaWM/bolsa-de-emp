@@ -1,0 +1,21 @@
+// Place all the styles related to the oferta controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div.boxhome {
+    background-color: lightgrey;
+    width: 50%;
+    padding: 0%;
+    border: 0 solid navy;
+    margin: 0;
+}
+
+div.boxhome.left{
+
+align: left
+}
+
+
+div.boxhome.right{
+
+align: right
+}

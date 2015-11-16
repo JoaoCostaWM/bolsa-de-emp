@@ -5,3 +5,55 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+##Admin
+User.create!(name:  "Example User",
+             email: "example@railstutorial.org",
+             password:              "foobar",
+             password_confirmation: "foobar",
+             tipoutilizador: 2,
+             activated: true,
+             activated_at: Time.zone.now)
+
+##Candidatos
+30.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+1}@railstutorial.org"
+  password = "password"
+  User.create!(name:  name,
+               email: email,
+               password:              password,
+               password_confirmation: password,
+              activated: true,
+              activated_at: Time.zone.now)
+end
+
+##Entidades
+30.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+31}@railstutorial.org"
+  password = "password"
+  User.create!(name:  name,
+               email: email,
+               password:              password,
+               password_confirmation: password,
+               tipoutilizador: 1,
+              activated: true,
+              activated_at: Time.zone.now)
+end
+
+##Noticias
+30.times do |n|
+  titulo  = Faker::Lorem.word
+  corpo = Faker::Lorem.sentence
+  Noticia.create!(title:  titulo,
+               content: corpo)
+end
+
+#Ofertas
+30.times do |n|
+ titulo  = Faker::Lorem.word
+  corpo = Faker::Lorem.sentence
+  Oferta.create!(title:  titulo,
+               content: corpo)
+end

@@ -1,0 +1,14 @@
+<li>
+<p>
+ <h3>Título: <span class="user"><%= noticia.title %></span></h3>
+</p>
+  <span class="content">
+    <%= noticia.content %>
+
+  </span>
+
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(noticia.created_at) %> ago.
+
+  </span>
+</li>

@@ -1,0 +1,65 @@
+  <title>Portal Bolsa de Emprego</title>
+
+<div class="boxhome" >
+<div class="left">
+  <h3>Ofertas</h3>
+  <% @ofertas=Oferta.last(3).reverse %>
+  <ul>
+  <% @ofertas.each do |f|%>
+    <li>
+     <h3>
+       <%=f.title%>
+     </h3>
+       <%=f.content%>
+    </li>
+  <%end%>
+  </ul>
+<%=link_to "Ver Todas as Ofertas", 'showOfertas' %>
+</div>
+
+<div class="right">
+<h3>Noticias</h3>
+  <% @noticias=Noticia.last(3).reverse %>
+  <ul>
+  <% @noticias.each do |n|%>
+    <li>
+     <h3>
+       <%=n.title%>
+     </h3>
+       <%=n.content%>
+    </li>
+  <%end%>
+  </ul>
+<%=link_to "Ver Todas as Noticias", 'showNoticias' %>
+</div>
+</div>
+
+
+
+
+<div class="boxhome" >
+
+
+</div>
+
+
+
+
+
+
+<div class=boxhome>
+<h3>Empresas</h3>
+
+<%=link_to "Ver Todas as Empresas", 'showEmpresas' %>
+
+</div>
+<div class=boxhome >
+
+<h3>Candidatos</h3>
+
+<%=link_to "Ver Todos os Candidatos", 'showCandidatos' %>
+
+</div>
+
+
+

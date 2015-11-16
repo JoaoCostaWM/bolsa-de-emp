@@ -1,4 +1,20 @@
 BolsaDeEmpApp::Application.routes.draw do
+  root             'static_pages#home'
+
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+  get 'sessions/new'
+  get 'users/new'
+  get 'showEntidades' => 'users#showEntidades'
+  get 'showCandidatos' => 'users#showCandidatos'
+  get 'showNoticias'  => 'noticias#showNoticias'
+  get 'showOfertas' => 'ofertas#showOfertas'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

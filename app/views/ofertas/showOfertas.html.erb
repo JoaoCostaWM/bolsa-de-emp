@@ -1,0 +1,12 @@
+<% provide(:title, 'Ofertas') %>
+
+<h1>Ofertas</h1>
+
+<%= will_paginate %>
+
+<ul class="ofertas">
+
+  <%= render @ofertas %>
+</ul>
+
+<%= will_paginate @ofertas%>
